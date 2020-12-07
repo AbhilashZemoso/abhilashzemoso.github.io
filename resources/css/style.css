@@ -1,0 +1,186 @@
+/*----------------------------------------*/
+/* BASIC SETUP */
+/*----------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+}
+
+/*----------------------------------------*/
+/* REUSABLE CONTENTS */
+/*----------------------------------------*/
+
+.row {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 160%;
+    margin:40px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.heading .underline {
+    height: 3px;
+    width: 100px;
+    margin: 10px;
+    background-color: rgb(0, 255, 255, .7);
+}
+
+
+
+/*----------------------------------------*/
+/* NAVBAR  */
+/*----------------------------------------*/
+
+
+.main-nav {
+    width: 100%;
+    list-style: none;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    padding-left: 5%;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin: 20px 15px;
+    font-size: 120%;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+    padding-bottom: 18px;
+}
+
+.main-nav li a:hover {
+    border-bottom: 3px solid rgb(0, 255, 255, .9);
+}
+
+
+/*----------------------------------------*/
+/* HEADER  */
+/*----------------------------------------*/
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/resources/img/bg-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.selfie {
+    background-image: url(/resources/img/my-photo.jpg);
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 25%;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, 1);
+}
+
+.welcome {
+    position: absolute;
+    color: rgb(255, 255, 255, .95);
+    top: 400px;
+    left: 20%;
+    font-size: 200%;
+}
+
+
+/*----------------------------------------*/
+/* ABOUT ME  */
+/*----------------------------------------*/
+
+#about-me{
+    height: 470px;
+}
+
+.left-content {
+    display: inline-block;
+    width: 45%;
+    padding-left: 20%;
+    padding-top: 5%;
+    font-size: 125%;
+}
+
+.right-content{
+    float: right;
+    display: inline-block;
+    height: 40px;
+    width: 50%;
+}
+
+.right-content .image{
+    background-image: url(/resources/img/about-me-photo.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    border-left: 150px solid #fff;
+    border-top: 400px solid transparent;
+}
+
+/*----------------------------------------*/
+/* GALLERY  */
+/*----------------------------------------*/
+
+#gallery{
+    max-width: 100%;
+    margin: 0 4%;
+}
+
+#photos{
+    display: inline-block;
+    width: 220px;
+    margin: 10px 30px;
+}
+
+#photos img{
+    height: 180px;
+    width: 270px;
+}
+
+/*----------------------------------------*/
+/*  CONTACT  */
+/*----------------------------------------*/
+
+.social-site{
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    margin: 0 20px;
+    border: 1px solid rgb(0,0,0,.1);
+    border-radius: 15px;
+}
+
+.social-site h3{
+    padding: 15px;
+    font-size: 200%;
+}
+
+#facebook{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255,255, 255, 0.6)),url(/resources/img/fb-bg.jpg);
+    background-position: center;
+}
+
+#linkedIn{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255,255, 255, 0.8)),url(/resources/img/linkedIn-bg.jpg);
+    background-position: center;
+}
+
+
