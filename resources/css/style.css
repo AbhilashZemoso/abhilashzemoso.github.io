@@ -53,7 +53,7 @@ html {
 .main-nav li {
     display: inline-block;
     margin: 20px 15px;
-    font-size: 170%;
+    font-size: 120%;
 }
 
 .main-nav li a {
@@ -83,12 +83,12 @@ header {
 
 .selfie {
     background-image: url(/resources/img/my-photo.jpg);
-    height: 30vh;
+    height: 25vh;
     min-width: 200px;
-    width: 15vw;
+    width: 12vw;
     position: absolute;
-    top: 25vh;
-    left: 25vw;
+    top: 30vh;
+    left: 20vw;
     background-position: center;
     background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, 1);
@@ -97,9 +97,9 @@ header {
 .welcome {
     position: absolute;
     color: rgb(255, 255, 255, .95);
-    top: 65vh;
-    left: 25vw;
-    font-size: 200%;
+    top: 60vh;
+    left: 17vw;
+    font-size: 180%;
 }
 
 
@@ -107,21 +107,26 @@ header {
 /* ABOUT ME  */
 /*----------------------------------------*/
 
-#about-me {
-    height: 70vh;
+
+
+.left-content, .right-content{
+    display: inline-block;
 }
 
+@media only screen and (min-width: 1601px){
+    #about-me {
+        height: 70vh;
+    }
+
 .left-content {
-    display: inline-block;
     width: 45%;
     padding-left: 20%;
     padding-top: 5%;
-    font-size: 130%;
+    font-size: 110%;
 }
 
 .right-content {
     float: right;
-    display: inline-block;
     height: 80%;
     width: 50%;
 }
@@ -135,6 +140,10 @@ header {
     border-top: 60vh solid transparent;
 }
 
+.right-content .small-image{
+    display: none;
+}
+}
 /*----------------------------------------*/
 /* GALLERY  */
 /*----------------------------------------*/
@@ -210,3 +219,28 @@ header {
 
 
 */
+
+/*----------------------------------------*/
+/* \FOR MOBILE */
+/*----------------------------------------*/
+
+@media only screen and (max-width: 1600px){
+
+    .left-content {
+        margin: 0 10%;
+    }
+
+    .heading {
+        font-size: 150%;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+    
+    .main-nav li {
+        font-size: 60%;
+    }
+    
+    
+}
