@@ -109,41 +109,43 @@ header {
 
 
 
-.left-content, .right-content{
+.left-content,
+.right-content {
     display: inline-block;
 }
 
-@media only screen and (min-width: 1601px){
+@media only screen and (min-width: 1601px) {
     #about-me {
         height: 70vh;
     }
 
-.left-content {
-    width: 45%;
-    padding-left: 20%;
-    padding-top: 5%;
-    font-size: 110%;
+    .left-content {
+        width: 45%;
+        padding-left: 20%;
+        padding-top: 5%;
+        font-size: 110%;
+    }
+
+    .right-content {
+        float: right;
+        height: 80%;
+        width: 50%;
+    }
+
+    .right-content .image {
+        background-image: url(/resources/img/about-me-photo.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        border-left: 150px solid #fff;
+        border-top: 60vh solid transparent;
+    }
+
+    .right-content .small-image {
+        display: none;
+    }
 }
 
-.right-content {
-    float: right;
-    height: 80%;
-    width: 50%;
-}
-
-.right-content .image {
-    background-image: url(/resources/img/about-me-photo.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    border-left: 150px solid #fff;
-    border-top: 60vh solid transparent;
-}
-
-.right-content .small-image{
-    display: none;
-}
-}
 /*----------------------------------------*/
 /* GALLERY  */
 /*----------------------------------------*/
@@ -179,52 +181,68 @@ header {
 /*  CONTACT  */
 /*----------------------------------------*/
 
+form {
+    height: 450px;
+    width: 100vw;
+    padding-left: 30vw;
+}
+
+form input{
+    border-radius: 5px;
+}
+
+form input, textarea{
+    height: 50px;
+    border: 1px solid rgb(0,0,0,.3);
+    padding: 15px;
+    width: 40vw;
+    min-width: 300px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+form label{
+    font-size: 18px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+form textarea{
+    height: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.button{
+    margin-top: 30px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.button:hover{
+    border: 1px solid transparent;
+    background-color: rgb(0,0,0,.1);
+}
+
+
+
 .social-media {
     display: inline-block;
-    margin: 10px 5vw;
+    margin: 0 2vw;
     cursor: pointer;
 }
 
 .logo {
-    height: 100px;
+    height: 50px;
 }
-
-/*
-.social-site{
-    display: inline-block;
-    width: 300px;
-    height: 400px;
-    padding: 20px;
-    margin: 20px 20px;
-    border: 1px solid rgb(0,0,0,.1);
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.social-site h3{
-    padding: 15px;
-    font-size: 150%;
-}
-
-#facebook{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7),
-     rgba(255,255, 255, 0.6)),url(/resources/img/bg-img.jpg);
-    background-position: center;
-}
-
-#linkedIn{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255,255, 255, 0.8)),url(/resources/img/linkedIn-bg.jpg);
-    background-position: center;
-}
-
-
-*/
 
 /*----------------------------------------*/
 /* \FOR MOBILE */
 /*----------------------------------------*/
 
-@media only screen and (max-width: 1600px){
+@media only screen and (max-width: 1600px) {
 
     .left-content {
         margin: 0 10%;
@@ -235,12 +253,12 @@ header {
     }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
 
-    
+
     .main-nav li {
         font-size: 60%;
     }
-    
-    
+
+
 }
