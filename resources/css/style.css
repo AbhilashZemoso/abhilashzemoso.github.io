@@ -215,6 +215,26 @@ form textarea{
     font-family: inherit;
 }
 
+.invalid{
+    border: 1px solid red;
+}
+
+form div{
+    position: relative;
+    width: 40vw;
+    min-width: 300px;
+}
+
+.error{
+    font-size: 18px;
+    color: red;
+    float: right;
+    position: absolute;
+    top:-25px;
+    right:0px;
+    display: none;
+}
+
 .button{
     margin-top: 30px;
     width: 200px;

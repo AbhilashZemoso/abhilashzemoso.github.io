@@ -105,17 +105,23 @@
                 <div class="underline"></div>
             </div>
         </center>
-            <form action="#contact">
-                <label name="name">Name *</label>
-                <input type="text" name="name" placeholder="Your name...">
+        <form id="contact-form">
+            <label name="name">Name *</label>
+            <div>
+                <input type="text" id="form-name" name="name" placeholder="Your name...">
+                <span id="name-error" class="error">is required</span>
+            </div>
                 <label name="email">Email *</label>
-                <input type="text" name="email" placeholder="Your email...">
-                <label name="subject">Subject</label>
-                <textarea name="subject" placeholder="Write something..."></textarea>
-                <input class="button" type="submit">
-              </form>
-            <br>
-        
+            <div>
+                <input type="text" id="form-email" name="email" placeholder="Your email...">
+                <span id="email-error" class="error">invalid email-id</span>
+            </div>
+            <label name="subject">Subject</label>
+            <textarea name="subject" placeholder="Write something..."></textarea>
+            <input class="button" type="submit" id="form-submit">
+        </form>
+        <br>
+        <span id="check"></span>
         <center>
             <div>
                 <div class="social-media"
@@ -136,6 +142,7 @@
             <br><br><br><br>
         </center>
     </div>
+    <script src="resources/app.js"></script>
 </body>
 
 </html>
