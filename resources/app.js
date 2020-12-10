@@ -12,10 +12,11 @@ contactForm.onsubmit = function(e){
     else{
         processEmptyName();
     }
-    if(email.match("[a-zA-Z.]+(@gmail.com)$")){
-        processValidEmail();
+    processValidEmail();
+    if(email===""){
+        processEmptyEmail();
     }
-    else{
+    else if(!email.match("[a-zA-Z.]+(@gmail.com)$")){
         processInValidEmail();
     }
     e.preventDefault();
@@ -33,6 +34,13 @@ function processValidName(){
     message.style.display = "none";
 }
 
+
+function processEmptyEmail(){
+    formEmail.classList.add("invalid");
+    const message = document.querySelector('#empty-email');
+    message.style.display = "block";
+}
+
 function processInValidEmail(){
     formEmail.classList.add("invalid");
     const message = document.querySelector('#email-error');
@@ -41,6 +49,8 @@ function processInValidEmail(){
 
 function processValidEmail(){
     formEmail.classList.remove("invalid");
-    const message = document.querySelector('#email-error');
-    message.style.display = "none";
+    const invalidError = document.querySelector('#email-error');
+    invalidError.style.display = "none";
+    const requiredError = document.querySelector('#empty-email');
+    requiredError.style.display = "none";
 }
