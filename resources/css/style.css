@@ -150,12 +150,12 @@ header {
 /* GALLERY  */
 /*----------------------------------------*/
 
-#gallery {
+.gallery {
     max-width: 100%;
     text-align: center;
 }
 
-#photos {
+.photos {
     margin: 0 4vw;
 }
 
@@ -187,13 +187,14 @@ form {
     padding-left: 30vw;
 }
 
-form input{
+form input {
     border-radius: 5px;
 }
 
-form input, textarea{
+form input,
+textarea {
     height: 50px;
-    border: 1px solid rgb(0,0,0,.3);
+    border: 1px solid rgb(0, 0, 0, .3);
     padding: 15px;
     width: 40vw;
     min-width: 300px;
@@ -202,48 +203,48 @@ form input, textarea{
     display: block;
 }
 
-form label{
+form label {
     font-size: 18px;
     padding-left: 10px;
     font-style: italic;
 }
 
-form textarea{
+form textarea {
     height: 100px;
     padding: 15px;
     border-radius: 5px;
     font-family: inherit;
 }
 
-.invalid{
+.invalid {
     border: 1px solid red;
 }
 
-form div{
+form div {
     position: relative;
     width: 40vw;
     min-width: 300px;
 }
 
-.error{
+.error {
     font-size: 18px;
     color: red;
     float: right;
     position: absolute;
-    top:-25px;
-    right:0px;
+    top: -25px;
+    right: 0px;
     display: none;
 }
 
-.button{
+.button {
     margin-top: 30px;
     width: 200px;
     cursor: pointer;
 }
 
-.button:hover{
+.button:hover {
     border: 1px solid transparent;
-    background-color: rgb(0,0,0,.1);
+    background-color: rgb(0, 0, 0, .1);
 }
 
 
@@ -259,7 +260,36 @@ form div{
 }
 
 /*----------------------------------------*/
-/* \FOR MOBILE */
+/*  GALLERY ADMIN */
+/*----------------------------------------*/
+
+body{
+    position: relative;
+}
+
+
+#photo-details{
+    display: none;
+    position: fixed;
+    top: 10%;
+    height: 580px;
+    background-color: rgb(255, 255, 255, .7);
+}
+
+.close{
+    height: 30px;
+    opacity: .6;
+    float: right;
+    margin: 10px 40px;
+    cursor: pointer;
+}
+
+#gallery-admin .photo{
+    cursor: pointer;
+}
+
+/*----------------------------------------*/
+/*  FOR MOBILE */
 /*----------------------------------------*/
 
 @media only screen and (max-width: 1600px) {

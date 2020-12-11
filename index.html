@@ -10,10 +10,11 @@
 <body>
     <div class="row">
         <ul class="main-nav">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#about-me">ABOUT ME</a></li>
-            <li><a href="#gallery">GALLERY</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="/gallery-admin.html">Gallery-admin</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
     <header>
@@ -46,55 +47,18 @@
         </div>
     </div>
     <br><br>
-    <div class="row" id="gallery">
+    <div class="row" id="gallery" class="gallery">
         <br><br>
         <center>
             <div class="heading">
                 <h3>GALLERY</h3>
                 <div class="underline"></div>
             </div>
+            <div class="photos">
+
+            </div>
+
         </center>
-        <div id="photos">
-            <div class="photo">
-                <img src="resources/img/gallery/photo1.jpg">
-                <h3>beach time</h3>
-            </div>
-
-            <div class="photo">
-                <img src="resources/img/gallery/photo2.jpg">
-                <h3>get together</h3>
-            </div>
-
-            <div class="photo">
-                <img src="resources/img/gallery/photo3.jpg">
-                <h3>relax with friends</h3>
-            </div>
-
-            <div class="photo">
-                <img src="resources/img/gallery/photo4.jpg">
-                <h3>collage last days</h3>
-            </div>
-
-            <div class="photo">
-                <img src="resources/img/gallery/photo5.jpg">
-                <h3>classroom</h3>
-            </div>
-
-            <div class="photo">
-                <img src="resources/img/gallery/photo6.jpg">
-                <h3>BDay celebrations</h3>
-            </div>
-
-            <div class="photo">
-                <img src="resources/img/gallery/photo7.jpg">
-                <h3>camping</h3>
-            </div>
-
-            <div class="photo">
-                <img src="resources/img/gallery/photo8.jpg">
-                <h3>first internship</h3>
-            </div>
-        </div>
     </div>
     <div class="row" id="contact">
 
@@ -111,7 +75,7 @@
                 <input type="text" id="form-name" name="name" placeholder="Your name...">
                 <span id="name-error" class="error">is required</span>
             </div>
-                <label name="email">Email *</label>
+            <label name="email">Email *</label>
             <div>
                 <input type="text" id="form-email" name="email" placeholder="Your email...">
                 <span id="email-error" class="error">invalid email-id</span>
@@ -119,6 +83,7 @@
             </div>
             <label name="subject">Subject</label>
             <textarea name="subject" placeholder="Write something..."></textarea>
+
             <input class="button" type="submit" id="form-submit">
         </form>
         <br>
@@ -144,6 +109,9 @@
         </center>
     </div>
     <script src="resources/app.js"></script>
+    <script>
+        indexInit();
+    </script>
 </body>
 
 </html>

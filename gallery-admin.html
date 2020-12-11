@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <title>Gallery Admin</title>
+</head>
+
+<body>
+
+    <center>
+        <div class="row" class="gallery" id="gallery-admin">
+            <div class="heading">
+                <h3>GALLERY ADMIN</h3>
+                <div class="underline"></div>
+            </div>
+            <div class="photos" style="width: 80%;">
+            </div>
+        </div>
+    </center>
+    <div id="photo-details">
+        <img class="close" src="resources/img/close.png">
+        <form>
+            <br>
+            <label name="name">Name *</label>
+            <div>
+                <input type="text" id="photo-name" name="name" placeholder="Photo name...">
+                <span id="name-error" class="error">is required</span>
+            </div>
+            <label name="url">URL *</label>
+            <div>
+                <input type="text" id="photo-url" name="url" placeholder="Photo url...">
+                <span id="url-error" class="error">invalid url</span>
+                <span id="empty-url" class="error">is required</span>
+            </div>
+            <label name="date">date *</label>
+            <div>
+                <input type="text" id="photo-date" name="date" placeholder="yyyy/mm/dd">
+                <span id="date-error" class="error">invalid date</span>
+                <span id="empty-date" class="error">is required</span>
+            </div>
+            
+            <label name="information">Information</label>
+            <textarea name="information" placeholder="Write something..."></textarea>
+
+            <input class="button" type="submit" id="photo-submit">
+        </form>
+    </div>
+
+    <script src="resources/app.js"></script>
+    <script src="resources/gallery-admin.js"></script>
+    <script>
+        init();
+    </script>
+</body>

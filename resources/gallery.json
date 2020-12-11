@@ -1,0 +1,57 @@
+[{
+        "id": 0,
+        "url": "/resources/img/gallery/photo1.jpg",
+        "name": "with friends",
+        "uploaded": "2020-12-11T00:00:00.000Z",
+        "information": "beach time"
+    },
+    {
+        "id": 1,
+        "url": "/resources/img/gallery/photo2.jpg",
+        "name": "with friends",
+        "uploaded": "2020-12-11T00:00:00.000Z",
+        "information": "get together"
+    },
+    {
+        "id": 2,
+        "url": "/resources/img/gallery/photo3.jpg",
+        "name": "with friends",
+        "uploaded": "2020-12-11T00:00:00.000Z",
+        "information": "chill with friends"
+    },
+    {
+        "id": 3,
+        "url": "/resources/img/gallery/photo4.jpg",
+        "name": "with friends",
+        "uploaded": "2020-12-11T00:00:00.000Z",
+        "information": "collage last days"
+    },
+    {
+        "id": 4,
+        "url": "/resources/img/gallery/photo5.jpg",
+        "name": "with friends",
+        "uploaded": "2020-12-11T00:00:00.000Z",
+        "information": "classroom"
+    },
+    {
+        "id": 5,
+        "url": "/resources/img/gallery/photo6.jpg",
+        "name": "with friends",
+        "uploaded": "2020-12-11T00:00:00.000Z",
+        "information": "BDay celebrations"
+    },
+    {
+        "id": 6,
+        "url": "/resources/img/gallery/photo7.jpg",
+        "name": "with friends",
+        "uploaded": "2020-12-11T00:00:00.000Z",
+        "information": "camping"
+    },
+    {
+        "id": 7,
+        "url": "/resources/img/gallery/photo8.jpg",
+        "name": "with friends",
+        "uploaded": "2020-12-11T00:00:00.000Z",
+        "information": "first internship"
+    }
+]
