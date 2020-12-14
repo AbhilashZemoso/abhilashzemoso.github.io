@@ -92,12 +92,33 @@ function createPhoto(photo) {
     const mainDiv = document.createElement('div');
     mainDiv.className = "photo";
     const img = document.createElement('img');
+    img.setAttribute('name', 'photo');
     img.setAttribute('src', photo.url);
     img.setAttribute('alt', photo.name);
     img.setAttribute('id', photo.id);
+    img.setAttribute('date', photo.date);
+    img.setAttribute('information', photo.information);
+
+    const iconDiv = document.createElement('div');
+    iconDiv.id = 'icons';
+
+    const editIcon = document.createElement('img');
+    editIcon.src = "resources/icons/edit-big.png";
+    editIcon.id = "edit-icon";
+
+    const deleteIcon = document.createElement('img');
+    deleteIcon.src = "resources/icons/delete-big.png";
+    deleteIcon.id = "delete-icon";
+
+    iconDiv.appendChild(editIcon);
+    iconDiv.appendChild(deleteIcon);
+
     const content = document.createElement('h3');
     content.innerHTML = photo.information;
     mainDiv.appendChild(img);
     mainDiv.appendChild(content);
+
+    mainDiv.appendChild(iconDiv);
+
     return mainDiv;
 }

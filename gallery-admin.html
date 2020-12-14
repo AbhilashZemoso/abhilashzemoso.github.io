@@ -8,25 +8,41 @@
 </head>
 
 <body>
-
+    <div class="row">
+        <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about-me">About Me</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="#">Gallery-admin</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+    <br><br>
     <center>
         <div class="row" class="gallery" id="gallery-admin">
             <div class="heading">
                 <h3>GALLERY ADMIN</h3>
                 <div class="underline"></div>
             </div>
+            <div id="button-parent">
+                <button class="add-button" onclick="displayAddPhoto()">add photo</button>
+            </div>
+            <br>
             <div class="photos" style="width: 80%;">
             </div>
         </div>
     </center>
     <div id="photo-details">
         <img class="close" src="resources/img/close.png">
-        <form>
+        <form id="photo-form">
             <br>
+            <div>
+                <input type="hidden" id="photo-id" name="id" value="-1">
+            </div>
             <label name="name">Name *</label>
             <div>
                 <input type="text" id="photo-name" name="name" placeholder="Photo name...">
-                <span id="name-error" class="error">is required</span>
+                <span id="empty-name" class="error">is required</span>
             </div>
             <label name="url">URL *</label>
             <div>
@@ -36,15 +52,14 @@
             </div>
             <label name="date">date *</label>
             <div>
-                <input type="text" id="photo-date" name="date" placeholder="yyyy/mm/dd">
+                <input type="text" id="photo-date" name="date" placeholder="DD/MM/YYYY">
                 <span id="date-error" class="error">invalid date</span>
                 <span id="empty-date" class="error">is required</span>
             </div>
-            
-            <label name="information">Information</label>
-            <textarea name="information" placeholder="Write something..."></textarea>
 
-            <input class="button" type="submit" id="photo-submit">
+            <label name="information">Information</label>
+            <textarea name="information" id="photo-information" placeholder="Write something..."></textarea>
+            <input class="button" type="submit">
         </form>
     </div>
 

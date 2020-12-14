@@ -48,6 +48,7 @@ html {
     background-color: rgb(0, 0, 0);
     position: fixed;
     padding-left: 5%;
+    z-index: 1;
 }
 
 .main-nav li {
@@ -284,8 +285,59 @@ body{
     cursor: pointer;
 }
 
-#gallery-admin .photo{
+#gallery-admin .photo:hover img[name="photo"]{
+    opacity: .2;
+}
+
+#button-parent{
+    width: 70%;
+    text-align: right;
+}
+
+.add-button{
+    height: 40px;
+    width: 120px;
+    font-size: 17px;
+    color: rgb(0, 0, 0, .7);
+    border: 1px solid rgb(0, 0, 0, .1);
+    border-radius: 8px;
+    background-color: rgb(200, 200, 200, .3);
     cursor: pointer;
+}
+
+.photo{
+    position: relative;
+}
+
+.add-button:hover{
+    border: 1px solid transparent;
+    background-color: rgb(200, 200, 200, .2);
+}
+
+#icons{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    display: none;
+}
+
+#gallery-admin .photo:hover #icons{
+    display:block;
+}
+
+#edit-icon, #delete-icon{
+    height: 60px;
+    width: auto;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0, .7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#edit-icon:hover, #delete-icon:hover{
+    background-color: rgb(100, 100, 100,.5);
+    border: 1px solid transparent;
 }
 
 /*----------------------------------------*/
