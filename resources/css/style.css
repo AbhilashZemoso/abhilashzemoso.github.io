@@ -245,10 +245,8 @@ form div {
 
 .button:hover {
     border: 1px solid transparent;
-    background-color: rgb(0, 0, 0, .1);
+    background-color: rgb(0, 0, 0, .4);
 }
-
-
 
 .social-media {
     display: inline-block;
@@ -268,6 +266,26 @@ body{
     position: relative;
 }
 
+
+#gallery-admin .photos{
+    width: inherit;
+    margin: 0 1%;
+    padding: 0;
+}
+
+#gallery-admin .photo{
+    margin: 0 .2%;
+}
+
+#gallery-admin .photos h3{
+    position: absolute;
+    bottom: 70px;
+    left: 15px;
+    font-size: 20px;
+    color: rgb(255, 255, 255, .7);
+    background-color: rgb(0, 0, 0, .7);
+    width: 270px;
+}
 
 #photo-details{
     display: none;

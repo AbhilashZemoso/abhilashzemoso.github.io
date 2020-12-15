@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="/resources/css/style.css">
     <title>Gallery Admin</title>
+    <style>
+    </style>
 </head>
 
 <body>
@@ -19,19 +21,21 @@
     </div>
     <br><br>
     <center>
-        <div class="row" class="gallery" id="gallery-admin">
+    <div class="row" class="gallery" id="gallery-admin">
+        
             <div class="heading">
                 <h3>GALLERY ADMIN</h3>
                 <div class="underline"></div>
             </div>
-            <div id="button-parent">
-                <button class="add-button" onclick="displayAddPhoto()">add photo</button>
-            </div>
-            <br>
-            <div class="photos" style="width: 80%;">
-            </div>
+        
+        <div id="button-parent">
+            <button class="add-button" onclick="displayAddPhoto()">add photo</button>
         </div>
-    </center>
+        <br>
+        <div class="photos">
+        </div>
+    </div>
+</center>
     <div id="photo-details">
         <img class="close" src="resources/img/close.png">
         <form id="photo-form">
