@@ -4,7 +4,7 @@ function init() {
     getAndSetData();
     setTimeout(() => {
         generateGalleryAdminPage();
-    }, 10);
+    }, 50);
 }
 
 function generateGalleryAdminPage() {
@@ -53,8 +53,6 @@ function validatePhotoDetails(details){
         document.querySelector('#photo-name').classList.add('invalid');
         isValid = false;
     }
-    else{
-    }
 
     if(details.url===""){
         document.querySelector("#empty-url").style.display = 'block';
@@ -70,7 +68,6 @@ function validatePhotoDetails(details){
 
         document.querySelector("#empty-url").style.display = 'none';
     }
-    else{}
 
     if(details.date===""){
         document.querySelector("#empty-date").style.display = 'block';
@@ -86,8 +83,6 @@ function validatePhotoDetails(details){
         isValid = false;
 
         document.querySelector("#empty-date").style.display = 'none';
-    }
-    else{
     }
 
     return isValid;
