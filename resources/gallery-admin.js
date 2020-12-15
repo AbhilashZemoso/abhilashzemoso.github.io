@@ -45,6 +45,9 @@ function removeErrors(){
 
 function validatePhotoDetails(details){
     let isValid = true;
+
+    removeErrors();
+
     if(details.name===""){
         document.querySelector("#empty-name").style.display = 'block';
         document.querySelector('#photo-name').classList.add('invalid');
@@ -60,7 +63,7 @@ function validatePhotoDetails(details){
 
         document.querySelector("#url-error").style.display = 'none';
     }
-    else if(!details.url.match("^(http:|https:).*(.jpg|.jpeg|.png)+.*")){
+    else if(!details.url.match("^(http:|https:|data:image).*(.jpg|.jpeg|.png)+.*")){
         document.querySelector("#url-error").style.display = 'block';
         document.querySelector('#photo-url').classList.add('invalid');
         isValid = false;
