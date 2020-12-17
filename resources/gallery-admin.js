@@ -22,7 +22,7 @@ function addPhotoDetailsOnSubmitEvent() {
         e.preventDefault();
         const details = getFormPhotoDetails();
 
-        if(validatePhotoDetails(details)===true){
+        if (validatePhotoDetails(details) === true) {
             setPhotoDetails(details);
             hidePhotoDetails();
             resetPhotos();
@@ -30,7 +30,7 @@ function addPhotoDetailsOnSubmitEvent() {
     }
 }
 
-function removeErrors(){
+function removeErrors() {
     document.querySelector("#empty-name").style.display = 'none';
     document.querySelector('#photo-name').classList.remove('invalid');
 
@@ -43,25 +43,24 @@ function removeErrors(){
     document.querySelector('#photo-date').classList.remove('invalid');
 }
 
-function validatePhotoDetails(details){
+function validatePhotoDetails(details) {
     let isValid = true;
 
     removeErrors();
 
-    if(details.name===""){
+    if (details.name === "") {
         document.querySelector("#empty-name").style.display = 'block';
         document.querySelector('#photo-name').classList.add('invalid');
         isValid = false;
     }
 
-    if(details.url===""){
+    if (details.url === "") {
         document.querySelector("#empty-url").style.display = 'block';
         document.querySelector('#photo-url').classList.add('invalid');
         isValid = false;
 
         document.querySelector("#url-error").style.display = 'none';
-    }
-    else if(!details.url.match("^(http:|https:|data:image).*(.jpg|.jpeg|.png)+.*")){
+    } else if (!details.url.match("^(http:|https:|data:image).*(.jpg|.jpeg|.png)+.*")) {
         document.querySelector("#url-error").style.display = 'block';
         document.querySelector('#photo-url').classList.add('invalid');
         isValid = false;
@@ -69,15 +68,14 @@ function validatePhotoDetails(details){
         document.querySelector("#empty-url").style.display = 'none';
     }
 
-    if(details.date===""){
+    if (details.date === "") {
         document.querySelector("#empty-date").style.display = 'block';
         document.querySelector('#photo-date').classList.add('invalid');
         isValid = false;
 
         document.querySelector("#date-error").style.display = 'none';
-    }
-    else if(!details.date.match("[0-9]{2}/[0-9]{2}/[0-9]{4}") ||
-            !isValidDate(details.date)){
+    } else if (!details.date.match("[0-9]{2}/[0-9]{2}/[0-9]{4}") ||
+        !isValidDate(details.date)) {
         document.querySelector("#date-error").style.display = 'block';
         document.querySelector('#photo-date').classList.add('invalid');
         isValid = false;
@@ -88,19 +86,19 @@ function validatePhotoDetails(details){
     return isValid;
 }
 
-function isValidDate(data){
+function isValidDate(data) {
     arr = data.split("/");
-    const date = new Date(arr[2],arr[1]-1,arr[0]);
+    const date = new Date(arr[2], arr[1] - 1, arr[0]);
 
     const ToDate = Date.now();
 
-    if(arr[0]!=date.getDate()||arr[1]-1!=date.getMonth()||arr[2]!=date.getFullYear()){
+    if (arr[0] != date.getDate() || arr[1] - 1 != date.getMonth() || arr[2] != date.getFullYear()) {
         return false;
     }
 
-    if (date > ToDate ){
-          return false;
-     }
+    if (date > ToDate) {
+        return false;
+    }
     return true;
 }
 
@@ -119,12 +117,16 @@ function photoAddEditEvent() {
 function photoAddDeleteEvent() {
     const photos = document.querySelectorAll("#delete-icon");
     photos.forEach(function (photo) {
-        photo.addEventListener('click', deletePhoto);
+        photo.addEventListener('click', (event) => {
+            if (confirm('Are you sure you want to delete this photo?')){
+                deletePhoto(event.target);
+            }
+        });
     });
 }
 
-function deletePhoto() {
-    const photoDiv = this.parentElement.parentElement;
+function deletePhoto(content) {
+    const photoDiv = content.parentElement.parentElement;
     const imgElement = photoDiv.querySelector('img');
     const theId = imgElement.id;
 
@@ -164,19 +166,19 @@ function displayPhotoDetails() {
 function displayAddPhoto() {
     document.querySelector("#photo-details").style.display = "block";
     document.querySelector('#gallery-admin').style = "-webkit-filter: blur(8px);";
-    
+
     let details = getDefaultPhotoDetails();
 
     setFormPhotoDetails(details);
 }
 
-function getDefaultPhotoDetails(){
+function getDefaultPhotoDetails() {
     let details = {
-        'id':-1,
-        'url':'',
-        'name':'',
-        'date':'',
-        'information':''
+        'id': -1,
+        'url': '',
+        'name': '',
+        'date': '',
+        'information': ''
     };
     return details;
 }
